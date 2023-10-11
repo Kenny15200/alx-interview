@@ -1,31 +1,26 @@
 #!/usr/bin/python3
 
 def pascal_triangle(n):
-    # Check if n is a positive integer
-    if n <= 0 or not isinstance(n, int):
+    if n <= 0:
         return []
 
-    # Initialize the triangle with the first row
-    triangle = [[1]]
+    triangle = [[1]]  # Initialize with the first row
 
-    # Generate the rest of the rows
-    for i in range(1, n):
-        # Calculate the next row
-        previous_row = triangle[-1]
-        new_row = [1]  # First element is always 1
-        for j in range(1, i):
-            new_value = previous_row[j - 1] + previous_row[j]
+    for _ in range(1, n):
+        prev_row = triangle[-1]  # Get the previous row
+        new_row = [1]  # The first element is always 1
+        for i in range(1, len(prev_row)):
+            new_value = prev_row[i - 1] + prev_row[i]  # Calculate new values
             new_row.append(new_value)
-        new_row.append(1)  # Last element is always 1
-
-        # Append the new row to the triangle
+        new_row.append(1)  # The last element is always 1
         triangle.append(new_row)
 
     return triangle
 
 # Example usage:
 if __name__ == "__main__":
-    result = pascal_triangle(5)
+    n = 5
+    result = pascal_triangle(n)
     for row in result:
         print(row)
 
