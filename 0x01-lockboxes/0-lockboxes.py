@@ -1,6 +1,15 @@
 #!/usr/bin/python3
-
 def canUnlockAll(boxes):
+    """
+    Determines if all boxes can be opened.
+
+    Args:
+        boxes (list of lists): A list of lists representing locked boxes. Each box may contain keys to other boxes.
+
+    Returns:
+        bool: True if all boxes can be opened, False otherwise.
+    """
+    # Check if boxes list is empty
     if not boxes:
         return False
 
@@ -22,3 +31,4 @@ def canUnlockAll(boxes):
 
     # If all boxes are visited, return True
     return len(visited) == len(boxes)
+
