@@ -1,7 +1,5 @@
 #!/usr/bin/node
-
 const request = require('request');
-
 const movieID = process.argv[2];
 
 // Check if movieID is provided
