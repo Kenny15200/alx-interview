@@ -65,7 +65,7 @@ All your files must be executable
 Tasks
 0. Rotate 2D Matrix
 mandatory
-Score: 0.0% (Checks completed: 0.0%)
+Sore: 0.0% (Checks completed: 0.0%)
 Given an n x n 2D matrix, rotate it 90 degrees clockwise.
 
 Prototype: def rotate_2d_matrix(matrix):
